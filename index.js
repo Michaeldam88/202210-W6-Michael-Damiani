@@ -1,14 +1,20 @@
 import { createTable } from './js/createTable.js';
 import { newPhase } from './js/newPhase.js';
 
-const tableSize = 3;
+const tableSize = 30;
+
 let gameTable = createTable(tableSize);
 
 //asignación de punto de inicio manual para testear
-gameTable[0][1] = 1;
-gameTable[1][1] = 1;
-gameTable[2][1] = 1;
+gameTable[1][2] = 1;
+gameTable[2][2] = 1;
+gameTable[3][2] = 1;
+gameTable[4][2] = 1;
+gameTable[5][2] = 1;
 
-console.table(gameTable);
-gameTable = newPhase(gameTable);
-console.table(gameTable);
+const showNewTable = () => {
+    gameTable = newPhase(gameTable);
+    console.table(gameTable);
+};
+
+setInterval(showNewTable, 1000);
