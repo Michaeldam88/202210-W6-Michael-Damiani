@@ -1,7 +1,7 @@
 import { createTable } from './js/createTable.js';
 import { newPhase } from './js/newPhase.js';
 
-const tableSize = 4;
+const tableSize = 3;
 let gameTable = createTable(tableSize);
 
 //asignación de punto de inicio manual para testear
