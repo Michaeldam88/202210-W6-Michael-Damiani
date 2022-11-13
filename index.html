@@ -7,5 +7,19 @@
         <title>Conway's Game of Life</title>
         <script src="index.js" type="module"></script>
     </head>
-    <body></body>
+    <body>
+        <hi>Conway's Game of Life</hi>
+        <section>
+            <h2>Controls</h2>
+            <label for="tableSize">Table Size</label>
+            <input id="tableSize" type="number" min="3" placeholder="10" />
+            <label for="liveCells">Live Cells</label>
+            <input id="liveCells" type="number" min="3" placeholder="5" />
+            <button>Start Simulation</button>
+            <button>Stop Simulation</button>
+        </section>
+        <section>
+            <div class="displayContainer" id="displayContainer"></div>
+        </section>
+    </body>
 </html>
