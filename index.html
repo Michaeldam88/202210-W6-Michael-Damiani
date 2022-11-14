@@ -5,7 +5,66 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Conway's Game of Life</title>
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/index.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="shortcut icon"
+            href="assets/icons8-dice-64.png"
+            type="image/x-icon"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
         <script src="index.js" type="module"></script>
     </head>
-    <body></body>
+    <body>
+        <h1>Conway's Game of Life</h1>
+        <section class="controlSection">
+            <h2>Controls</h2>
+            <div>
+                <label for="tableSize">Table Size:</label>
+                <input
+                    id="tableSize"
+                    type="number"
+                    min="3"
+                    value="40"
+                    max="60"
+                />
+                <label for="liveCells">Live Cells:</label>
+                <input
+                    id="liveCells"
+                    type="number"
+                    min="3"
+                    value="300"
+                    max="2000"
+                />
+                <label for="refreshTime">Refresh Time:</label>
+                <input
+                    id="refreshTime"
+                    type="number"
+                    min="1"
+                    value="1"
+                    max="20"
+                />
+            </div>
+            <div>
+                <button id="start">Start Simulation</button>
+                <button id="stop">Stop Simulation</button>
+                <label class="turnLabel" for="turnsDisplay">Turns</label>
+                <input
+                    id="turnsDisplay"
+                    class="turnsDisplay"
+                    type="number"
+                    value="0"
+                    readonly
+                />
+            </div>
+        </section>
+        <section class="displaySection">
+            <div class="displayContainer" id="displayContainer"></div>
+        </section>
+    </body>
 </html>
