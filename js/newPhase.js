@@ -1,12 +1,27 @@
 import { checkCase } from './checkCase.js';
+const displayContainerDiv = document.getElementById('displayContainer');
+
 export const newPhase = (gameTable) => {
     const newTableSituation = [];
+    displayContainerDiv.innerHTML = '';
     gameTable.forEach((row, rowI) => {
+        const newRowDiv = document.createElement('div');
+        newRowDiv.className = 'newRowDiv';
         const newRow = [];
         row.forEach((element, columnI) => {
-            newRow.push(checkCase(element, rowI, columnI, gameTable));
+            const checkResult = checkCase(element, rowI, columnI, gameTable);
+            newRow.push(checkResult);
+
+            const newDivElement = document.createElement('div');
+            if (checkResult === 1) {
+                newDivElement.className = 'liveCells';
+            } else {
+                newDivElement.className = 'deadCells';
+            }
+            newRowDiv.appendChild(newDivElement);
         });
         newTableSituation.push(newRow);
+        displayContainerDiv.appendChild(newRowDiv);
     });
     return newTableSituation;
 };

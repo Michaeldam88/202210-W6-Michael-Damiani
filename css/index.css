@@ -54,8 +54,45 @@ button:active {
 
 .displaySection {
     margin-top: 2rem;
+    width: 25rem;
+    height: 25rem;
     background-color: black;
-    width: 100%;
-    height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     box-shadow: 3px 3px 10px 2px rgb(0 0 0 / 11%);
+}
+
+.displayContainer {
+    border: solid 1px #46a2fc;
+    background: radial-gradient(
+        circle,
+        rgba(70, 252, 109, 1) 0%,
+        rgba(70, 236, 159, 1) 24%,
+        rgba(70, 252, 213, 1) 43%,
+        rgba(70, 214, 252, 1) 66%,
+        #46a2fc 86%
+    );
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.newRowDiv {
+    display: flex;
+}
+
+.liveCells {
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border: black 1px solid;
+}
+
+.deadCells {
+    width: 10px;
+    height: 10px;
+    background-color: black;
 }
