@@ -30,6 +30,6 @@ export const newPhase = (gameTable) => {
         displayContainerDiv.appendChild(newRowDiv);
     });
 
-    if (aliveCells === 0) return newTableSituation = 0;
+    if (aliveCells === 0) newTableSituation = [0];
     return newTableSituation;
 };
