@@ -16,9 +16,10 @@ let turnNumber;
 
 const showNewTable = () => {
     gameTable = newPhase(gameTable);
-    if (gameTable === 0) {
+    
+    if (gameTable[0] === 0) {
+        window.clearInterval(tableUpdate);        
         displayContainerDiv.textContent = 'No Alive Cells';
-        window.clearInterval(tableUpdate);
     }
     turnNumber++;
     turnsDisplay.value = turnNumber;
