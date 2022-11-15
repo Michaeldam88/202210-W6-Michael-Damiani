@@ -3,7 +3,7 @@ import { checkCase } from './checkCase.js';
 const displayContainerDiv = document.getElementById('displayContainer');
 
 export const newPhase = (gameTable) => {
-    const newTableSituation = [];
+    let newTableSituation = [];
     let aliveCells = 0;
     displayContainerDiv.innerHTML = '';
 
@@ -30,6 +30,6 @@ export const newPhase = (gameTable) => {
         displayContainerDiv.appendChild(newRowDiv);
     });
 
-    if (aliveCells === 0) return 0;
+    if (aliveCells === 0) return newTableSituation = 0;
     return newTableSituation;
 };
