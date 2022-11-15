@@ -1,6 +1,6 @@
 /**
- * @jest-environment jsdom
- */
+    * @jest-environment jsdom
+*/
 
 import { newPhase } from '../js/newPhase.js';
 
