@@ -1,4 +1,4 @@
-import { checkCase } from './checkCase.js';
+import { checkCase } from '../js/checkCase.js';
 
 describe('Given a table of [[0, 0, 0],[0, 1, 1],[0, 0, 0]]', () => {
     const gameTable = [

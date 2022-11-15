@@ -1,4 +1,4 @@
-import { generateRandomTable } from './randomTable.js';
+import { generateRandomTable } from '../js/randomTable.js';
 
 describe('Given a table of 3x3 and a live cell of 3', () => {
     const arr = [
@@ -17,4 +17,9 @@ describe('Given a table of 3x3 and a live cell of 3', () => {
     test(`it should return 6`, () => {
         expect(result).toBe(6);
     });
+
+
 });
+
+
+

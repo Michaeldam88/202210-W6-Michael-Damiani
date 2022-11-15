@@ -1,4 +1,4 @@
-import { createTable } from './createTable.js';
+import { createTable } from '../js/createTable.js';
 
 describe('Given a value of 3', () => {
     const result = [
