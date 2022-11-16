@@ -14,8 +14,10 @@ const displayContainerDiv = document.getElementById('displayContainer');
 let tableUpdate;
 let gameTable;
 let turnNumber;
+let running = false;
 
 const showNewTable = () => {
+    running = true;
     gameTable = newPhase(gameTable);
     if (gameTable[0] === 0) {
         window.clearInterval(tableUpdate);
@@ -26,14 +28,19 @@ const showNewTable = () => {
 };
 
 startSimulation.addEventListener('click', () => {
+    if (running) return;
     gameTable = createTable(tableSize.value);
     displayTable(gameTable);
     gameTable = generateRandomTable(gameTable, liveCells.value);
-    tableUpdate = setInterval(showNewTable, refreshTime.value * 1000);
+    tableUpdate = setInterval(
+        showNewTable,
+        1000 / (refreshTime.value === '0' ? 1 : refreshTime.value)
+    );
     turnNumber = 0;
     turnsDisplay.value = turnNumber;
 });
 
 stopSimulationBtn.addEventListener('click', () => {
     window.clearInterval(tableUpdate);
+    running = false;
 });
