@@ -1,6 +1,7 @@
 import { createTable } from './js/createTable.js';
 import { newPhase } from './js/newPhase.js';
 import { generateRandomTable } from './js/randomTable.js';
+import { displayTable } from './js/displayTable.js';
 
 const startSimulation = document.getElementById('start');
 const stopSimulationBtn = document.getElementById('stop');
@@ -16,9 +17,8 @@ let turnNumber;
 
 const showNewTable = () => {
     gameTable = newPhase(gameTable);
-    
     if (gameTable[0] === 0) {
-        window.clearInterval(tableUpdate);        
+        window.clearInterval(tableUpdate);
         displayContainerDiv.textContent = 'No Alive Cells';
     }
     turnNumber++;
@@ -27,6 +27,7 @@ const showNewTable = () => {
 
 startSimulation.addEventListener('click', () => {
     gameTable = createTable(tableSize.value);
+    displayTable(gameTable);
     gameTable = generateRandomTable(gameTable, liveCells.value);
     tableUpdate = setInterval(showNewTable, refreshTime.value * 1000);
     turnNumber = 0;
