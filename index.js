@@ -10,6 +10,7 @@ const liveCells = document.getElementById('liveCells');
 const refreshTime = document.getElementById('refreshTime');
 const turnsDisplay = document.getElementById('turnsDisplay');
 const displayContainerDiv = document.getElementById('displayContainer');
+const colorSelector = document.querySelectorAll('button.colorSelector');
 
 let tableUpdate;
 let gameTable;
@@ -43,4 +44,18 @@ startSimulation.addEventListener('click', () => {
 stopSimulationBtn.addEventListener('click', () => {
     window.clearInterval(tableUpdate);
     running = false;
+});
+
+colorSelector.forEach((element, i) => {
+    element.addEventListener('click', () => {
+        displayContainerDiv.classList.remove(
+            'colorBlueGreen',
+            'colorRedYellow',
+            'colorPurpleRed'
+        );
+
+        if (i === 0) displayContainerDiv.className = 'colorBlueGreen';
+        if (i === 1) displayContainerDiv.className = 'colorRedYellow';
+        if (i === 2) displayContainerDiv.className = 'colorPurpleRed';
+    });
 });
