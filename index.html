@@ -30,15 +30,15 @@
                     id="tableSize"
                     type="number"
                     min="3"
-                    value="40"
-                    max="60"
+                    value="55"
+                    max="55"
                 />
                 <label for="liveCells">Live Cells:</label>
                 <input
                     id="liveCells"
                     type="number"
                     min="3"
-                    value="300"
+                    value="500"
                     max="2000"
                 />
                 <label for="refreshTime">Refresh Time:</label>
@@ -51,8 +51,9 @@
                 />
             </div>
             <div>
-                <button id="start">Start Simulation</button>
-                <button id="stop">Stop Simulation</button>
+                <button id="start">Start</button>
+                <button id="stop">Stop</button>
+                <button id="reset">Reset</button>
                 <label class="turnLabel" for="turnsDisplay">Turns</label>
                 <input
                     id="turnsDisplay"
@@ -64,7 +65,15 @@
             </div>
         </section>
         <section class="displaySection">
-            <div class="displayContainer" id="displayContainer"></div>
+            <div
+                class="displayContainer colorBlueGreen"
+                id="displayContainer"
+            ></div>
+        </section>
+        <section class="colorSelect">
+            <button class="colorSelector colorBlueGreen"></button>
+            <button class="colorSelector colorRedYellow"></button>
+            <button class="colorSelector colorPurpleRed"></button>
         </section>
     </body>
 </html>
