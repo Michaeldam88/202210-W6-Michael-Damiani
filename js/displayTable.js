@@ -10,7 +10,7 @@ export const displayTable = (gameTable) => {
         row.forEach((_element, columnI) => {
             const newDivElement = document.createElement('div');
             newDivElement.className = 'deadCells';
-            newDivElement.id = `position${rowI}${columnI}`;
+            newDivElement.id = `row${rowI}col${columnI}`;
             newRowDiv.appendChild(newDivElement);
         });
         displayContainerDiv.appendChild(newRowDiv);
