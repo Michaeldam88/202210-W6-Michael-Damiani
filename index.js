@@ -24,6 +24,8 @@ const showNewTable = () => {
     gameTable = newPhase(gameTable);
     if (gameTable[0] === 0) {
         window.clearInterval(tableUpdate);
+        running = false;
+        paused = false;
         displayContainerDiv.textContent = 'No Alive Cells';
     }
     turnNumber++;
@@ -59,6 +61,7 @@ stopSimulationBtn.addEventListener('click', () => {
 
 resetSimulationBtn.addEventListener('click', () => {
     window.clearInterval(tableUpdate);
+    gameTable = createTable(0);
     displayTable(gameTable);
     running = false;
     paused = false;
@@ -66,14 +69,13 @@ resetSimulationBtn.addEventListener('click', () => {
 
 colorSelector.forEach((element, i) => {
     element.addEventListener('click', () => {
-        displayContainerDiv.classList.remove(
-            'colorBlueGreen',
-            'colorRedYellow',
-            'colorPurpleRed'
-        );
+        displayContainerDiv.classList.remove();
 
-        if (i === 0) displayContainerDiv.className = 'colorBlueGreen';
-        if (i === 1) displayContainerDiv.className = 'colorRedYellow';
-        if (i === 2) displayContainerDiv.className = 'colorPurpleRed';
+        if (i === 0)
+            displayContainerDiv.className = 'displayContainer colorBlueGreen';
+        if (i === 1)
+            displayContainerDiv.className = 'displayContainer colorRedYellow';
+        if (i === 2)
+            displayContainerDiv.className = 'displayContainer colorPurpleRed';
     });
 });

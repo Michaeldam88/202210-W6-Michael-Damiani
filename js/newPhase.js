@@ -10,15 +10,16 @@ export const newPhase = (gameTable) => {
         row.forEach((element, columnI) => {
             const checkResult = checkCase(element, rowI, columnI, gameTable);
             newRow.push(checkResult);
-            if (element !== checkResult) {
-                updateTable(rowI, columnI, checkResult);
-            }
             if (checkResult === 1) {
                 aliveCells++;
+            }
+            if (element !== checkResult) {
+                updateTable(rowI, columnI, checkResult);
             }
         });
         newTableSituation.push(newRow);
     });
+
     if (aliveCells === 0) newTableSituation = [0];
     return newTableSituation;
 };

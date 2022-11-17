@@ -81,7 +81,6 @@ button:active {
 }
 
 .displayContainer {
-    border: solid 1px #faebd7;
     width: fit-content;
     display: flex;
     align-items: center;
