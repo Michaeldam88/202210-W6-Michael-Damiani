@@ -30,8 +30,7 @@ export const checkCase = (element, rowI, columnI, gameTable) => {
     liveElements += gameTable[rowPlus][columnPlus];
 
     if (element === 1) {
-        if (liveElements > 3) return 0;
-        if (liveElements < 2) return 0;
+        if (liveElements > 3 || liveElements < 2) return 0;
         return 1;
     }
     if (liveElements === 3) return 1;

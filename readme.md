@@ -8,7 +8,7 @@ Try it on Netlify
 https://conwaylifegame.netlify.app/
 
 Check on Sonar
-https://sonarcloud.io/project/configuration?id=Michaeldam88_202210-W6-Michael-Damiani
+https://sonarcloud.io/project/overview?id=Michaeldam88_202210-W6-Michael-Damiani
 
 Deberás de programar el [Juego de la vida de Conway](https://es.wikipedia.org/wiki/Juego_de_la_vida).
 
